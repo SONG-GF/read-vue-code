@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="test"></div>
+    <script src="./jslib/mustache.js"></script>
+    <script>
+      var templateStr = `
+        <div>我买了一个{{thing}}，花了{{money}}</div>
+        `;
+
+      var data = {
+        thing: "苹果",
+        money: "21",
+      };
+
+      var domStr = Mustache.render(templateStr, data);
+      const test = document.getElementById("test");
+      test.innerHTML = domStr;
+    </script>
+  </body>
+</html>
