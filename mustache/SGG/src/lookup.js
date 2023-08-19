@@ -9,7 +9,6 @@
         }
     }
     那么lookup(dataObj, 'a.b.c')结果就是100
-    不忽悠大家，这个函数是某个大厂的面试题
 */
 export default function lookup(dataObj, keyName) {
   // 看看keyName中有没有点符号，但是不能是.本身
